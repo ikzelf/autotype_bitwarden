@@ -72,7 +72,8 @@ tell application "System Events"
 			# set texttosay to the text returned of the result
 			set texttosay to pwd
 			
-			activate application frontAppName # "Citrix Viewer"
+			# activate application frontAppName
+			activate application "Citrix Viewer" # hardcoded :-( (because of space in name?)
 			try
 				keystroke texttosay
 			on error errMsg number errorNumber
